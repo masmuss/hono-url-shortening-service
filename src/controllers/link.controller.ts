@@ -1,9 +1,9 @@
-import { OpenAPIHono } from '@hono/zod-openapi'
+import { Hono } from 'hono'
 import { Context } from 'hono'
 import { CreateShortLinkRequest, ShortLinkResponse } from '@/models/link'
 import { LinkService } from '@/services/link.service'
 
-export const linkController = new OpenAPIHono()
+export const linkController = new Hono()
 
 linkController.post('/', async (ctx: Context) => {
   const request = (await ctx.req.json()) as CreateShortLinkRequest

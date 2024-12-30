@@ -19,8 +19,6 @@ vim .env
 DATABASE_URL=<your_database_connection_string>
 ```
 
-```shell
-
 To run:
 ```sh
 bun run dev
